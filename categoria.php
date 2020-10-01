@@ -13,13 +13,14 @@
 		<div class="col-12 z-depth-3 mt-3 px-4 py-3 white order-lg-1 order-2 caja_entradas">
 			<?php foreach (consultasTablas('entradas', 'entradas_categorias') as $entrada): ?>
 				<div class="entrada clearfix">
-					<a href="entrada.php?id=<?=$entrada['id']?>" class="green-text text-uppercase font-weight-bold"><?=$entrada['titulo']?></a>
+					<a href="entrada.php?id_entrada=<?=$entrada['id']?>" class="green-text text-uppercase font-weight-bold"><?=$entrada['titulo']?></a>
 					<small class="d-block"><?=$entrada['nombre_categoria'] . ' | ' . date('Y/m/d', strtotime($entrada['fecha']));?></small>
 					<p class="mt-2 text-justify">
 						<?=substr($entrada['descripcion'], 0, 400) . '...'?>
 					</p>
 					<small class="float-right">Autor(a): <strong><?=$entrada['nombre_autor']?></strong></small>
 				</div>
+				<hr>
 			<?php endforeach?>
 		</div>
 		<!-- Caja principal -->

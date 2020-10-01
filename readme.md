@@ -22,3 +22,4 @@ Una pagina realizada en PHP y MySQL para practicar mis conocimientos en estos le
 * Listar ultimas 4 entradas en la pagina principal
 * Listar todas las entradas
 * Listar entradas por categorias
+* Mostrar entrada individual

@@ -58,6 +58,11 @@ function consultasTablas($tabla, $condicion = null)
                     $id_categoria = $_GET['categoria_id'];
                     $sql          = "SELECT $tabla.*,usuarios.nombre AS 'nombre_autor',categorias.nombre AS 'nombre_categoria' FROM $tabla, usuarios, categorias WHERE usuarios.id = $tabla.usuario_id AND categorias.id = $tabla.categoria_id AND $tabla.categoria_id={$id_categoria} ORDER BY $tabla.fecha DESC";
                     break;
+
+                case ($condicion == 'entrada_ind'):
+                    $id_entrada = $_GET['id_entrada'];
+                    $sql        = "SELECT $tabla.*,usuarios.nombre AS 'nombre_autor',categorias.nombre AS 'nombre_categoria',categorias.id AS 'id_categoria' FROM $tabla, usuarios, categorias WHERE usuarios.id = $tabla.usuario_id AND categorias.id = $tabla.categoria_id AND $tabla.id={$id_entrada} ORDER BY $tabla.fecha DESC";
+                    break;
             }
 
             break;
