@@ -79,3 +79,14 @@ function consultasTablas($tabla, $condicion = null)
     return $consulta;
 
 }
+
+function Buscar_entradas($busqueda = null)
+{
+    global $mysqli;
+    if (!empty($busqueda)) {
+        $sql = "SELECT entradas.*,usuarios.nombre AS 'nombre_autor',categorias.nombre AS 'nombre_categoria' FROM entradas, usuarios, categorias WHERE usuarios.id = entradas.usuario_id AND categorias.id = entradas.categoria_id AND entradas.titulo LIKE '%$busqueda%' ORDER BY entradas.titulo ASC";
+    }
+    $entradas_busqueda = $mysqli->query($sql);
+
+    return $entradas_busqueda;
+}

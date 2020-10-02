@@ -1,38 +1,61 @@
 .nav-item .active {
     background-color: #bdbdbd!important;
 }
+
 .md-form input:focus:not([readonly]) {
     box-shadow: 0 1px 0 0 green !important;
     border-bottom: 1px solid green !important;
 }
+
 .md-form input:focus:not([readonly])+label {
     color: green!important;
 }
+
+.buscador input:focus:not([readonly]) {
+    box-shadow: 0 1px 0 0 #e3e3e3 !important;
+    border-bottom: 1px solid #e3e3e3 !important;
+}
+
+.buscador input:focus:not([readonly])+label {
+    color: #e3e3e3!important;
+}
+
+.fas.fa-search.active {
+    color: #e3e3e3!important;
+}
+
 i.active {
     color: green!important;
 }
+
 .custom-select {
     border: none;
     background: none;
 }
+
 .custom-select:focus {
     outline: none;
     box-shadow: none;
 }
+
 textarea {
     overflow-y: none;
 }
+
 textarea::-webkit-scrollbar {
     width: 12px;
     background-color: #F5F5F5;
 }
+
 .md-form .md-textarea:focus:not([readonly]) {
     box-shadow: 0 1px 0 0 green !important;
     border-bottom: 1px solid green !important;
 }
+
 .md-form .md-textarea:focus:not([readonly])+label {
     color: green!important;
 }
+
 .caja_entradas {
     min-height: 100%;
     max-height: 100vh;

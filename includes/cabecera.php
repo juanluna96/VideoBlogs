@@ -57,6 +57,13 @@
 
             </ul>
             <!-- Links -->
+            <form class="form-inline" method="POST" action="buscar.php">
+                <div class="md-form m-0 buscador input-with-post-icon">
+                    <i class="fas fa-search input-prefix text-white"></i>
+                    <input type="text" id="buscar" name="buscar" class="form-control">
+                    <label for="buscar" class="text-white ml-2">Buscar</label>
+                </div>
+            </form>
         </div>
         <!-- Collapsible content -->
     </nav>
