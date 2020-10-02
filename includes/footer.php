@@ -21,7 +21,11 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
 </script>
 <!-- Your custom scripts (optional) -->
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		autosize(document.querySelectorAll('textarea'));
+	}, false);
 </script>
 </body>
 
